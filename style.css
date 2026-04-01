@@ -1,0 +1,243 @@
+/* ---------- MICROSOFT THEME ---------- */
+
+:root {
+    --ms-blue: #0078D4;
+    --ms-blue-hover: #106ebe;
+
+    --bg: #ffffff;
+    --bg-secondary: #f3f2f1;
+    --text: #ffffff;
+    --border: #e1dfdd;
+    --card-bg: #ffffff;
+    --shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    --bg: #111111;
+    --bg-secondary: #1b1b1b;
+    --text: #ffffff;
+    --border: #333;
+    --card-bg: #252423;
+}
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    letter-spacing: 0.09em;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.logo i {
+    color: var(--ms-blue);
+    margin-right: 8px;
+}
+
+.logo span {
+    color: var(--ms-blue);
+}
+
+.btn-icon {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(to bottom, var(--bg-secondary), var(--bg));
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.8;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* ---------- SEARCH ---------- */
+
+.search-box {
+    margin-top: 25px;
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 12px 12px 38px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text);
+}
+
+/* ---------- SERVICES ---------- */
+
+.section-title {
+    margin: 40px 0 20px;
+    font-size: 26px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+/* ---------- CARD ---------- */
+
+.card {
+    background: var(--card-bg);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--ms-blue);
+}
+
+.card i {
+    color: var(--ms-blue);
+}
+
+.card h3 {
+    margin: 15px 0 8px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn-ms {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--ms-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn-ms:hover {
+    background: var(--ms-blue-hover);
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    background: var(--bg-secondary);
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* CONTACT LINKS */
+.links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my-links a {
+    color: white;              
+    text-decoration: none;     
+    display: inline-block;
+    margin: 5px 0;
+}
+
+
+.my-links a:visited,
+.my-links a:hover,
+.my-links a:active {
+    color: white;
+    text-decoration: none;
+}
+
+
+.my-links i {
+    color: white;
+    margin-right: 5px;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--ms-blue);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
