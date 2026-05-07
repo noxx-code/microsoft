@@ -1,5 +1,6 @@
 // ---------- SERVICES LIST (MATCHES links.json) ----------
 const services = [
+    { id: 'microsoft', name: 'Microsoft', desc: 'Official Microsoft Account portal.', icon: 'fa-building' },
     { id: 'azure', name: 'Azure', desc: 'Build, deploy, and manage cloud applications.', icon: 'fa-cloud' },
     { id: 'imaginecup', name: 'Imagine Cup', desc: 'Global student innovation competition.', icon: 'fa-trophy' },
     { id: 'fabric-blog', name: 'Fabric Blog', desc: 'Latest updates from Microsoft Fabric.', icon: 'fa-newspaper' },
